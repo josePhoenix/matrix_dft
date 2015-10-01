@@ -1,0 +1,8 @@
+.ipynb_checkpoints
+*.prof
+*.so
+__pycache__
+build/
+*.pyc
+matrix_dft/*.c
+matrix_dft/*.html

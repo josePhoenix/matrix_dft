@@ -1,0 +1,20 @@
+matrix_dft.matrix_dft
+matrix_dft.matrix_idft
+
+matrix_dft.backend_numpy.matrix_dft
+matrix_dft.backend_python.matrix_dft
+matrix_dft.backend_cython.matrix_dft
+matrix_dft.backend_opencl.matrix_dft
+
+at init, class should prepare cache or kernels as appropriate
+we should try to reuse a single class instance at the POPPY level
+maybe offer a high level helper as a function at the module level
+centering should not be specified at init time, since it can just be a cache key part
+
+need a profiling script to check performance characteristics of different implementations and caching strategies
+perhaps make a sequence of standard array shapes:
+    100x100 -- five times with different input arrays
+    100x200
+    200x100
+
+wait, what's the scaling factor here? there's input pix and output pix
